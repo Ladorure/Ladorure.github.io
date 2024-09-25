@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaDorure - Solutions IA, Cloud et Applications Developpement</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Font Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <style>
+        /* Custom Gradient Background */
+        .bg-gradient-custom {
+            background: linear-gradient(to right, #f0f0f0, #ffd700);
+            /* background: repeating-linear-gradient(135deg, #d6b65b, #b89a3b, #a67c2d);*/
+            /* Softened gradient */
+        }
+
+
+        /* Gold Color Variable */
+        :root {
+            --gold-color: #d4af37;
+            /* More sophisticated gold */
+        }
+
+        /* Apply gold color to text and elements */
+        .text-gold {
+            color: var(--gold-color);
+        }
+
+        .bg-gold {
+            background-color: var(--gold-color);
+        }
+
+        .hover:bg-gold-dark {
+            background-color: #b28f26;
+            /* Darker gold on hover */
+        }
+
+        /* Animation for Hero Title */
+        .hero-title {
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Subtle pulse animation for Get Started button */
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hover effects for navigation links */
+        nav a {
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--gold-color);
+        }
+
+        /* Hover effects for service cards */
+        .services .bg-white:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Hover effects for industry icons */
+        .industries i {
+            transition: transform 0.3s ease;
+        }
+
+        .industries i:hover {
+            transform: scale(1.1);
+        }
+
+        /* Hover effects for process icons */
+        .process i {
+            transition: transform 0.3s ease;
+        }
+
+        .process i:hover {
+            transform: scale(1.1);
+        }
+
+        /* Fade in animation for success stories */
+        .success .bg-gray-100 {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .homeEffect1 {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body class="font-sans leading-relaxed tracking-normal bg-gradient-custom">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 bg-white shadow-md">
+        <div class="container mx-auto flex items-center justify-between flex-wrap p-4">
+            <div class="flex items-center flex-shrink-0 text-gold mr-6">
+                <span class="font-semibold text-xl tracking-tight">LaDorure</span>
+            </div>
+            <div class="block lg:hidden">
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-700 border-gray-700 hover:text-gold hover:border-gold">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block" id="nav-content">
+                <div class="text-sm lg:flex-grow">
+                    <a href="#home" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gold mr-4">
+                        Accueil
+                    </a>
+                    <a href="#services" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gold mr-4">
+                        Services
+                    </a> 
+                    <a href="#process" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gold mr-4">
+                        Notre processus
+                    </a>
+                    <a href="#industries" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gold mr-4">
+                        Technologies
+                    </a>
+                   
+                    <a href="#contact" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gold">
+                        Contact
+                    </a>
+                </div>
+                <div>
+                    <a href="#contact"
+                        class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-gold hover:bg-gold-dark mt-4 lg:mt-0 pulse-button">
+                        Commencer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 process">
+        <!-- process items -->
+    </div>
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 homeEffect">
+        <div class="container mx-auto px-6 py-20 text-center">
+            <h1 class="hero-title text-4xl md:text-6xl font-bold text-gray-800 tracking-tight">Donnez un coup de pouce à
+                votre entreprise avec des solutions d'IA et de cloud</h1>
+            <p class="mt-4 text-lg md:text-2xl text-gray-600">Favoriser l'innovation et l'efficacité grâce à des
+                conseils informatiques intelligents</p>
+            <a href="#contact"
+                class="mt-8 inline-block bg-gold text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Transformer
+                votre flux de travail</a>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center text-gold ">Pourquoi choisir LaDorure ?</h2>
+            <div class="flex flex-wrap mt-12">
+                <div class="w-full md:w-1/2 lg:w-1/4 text-center px-4 mb-8 images-center">
+                    <div class="flex justify-center">
+                        <img class="w-12 h-12"
+                            src="images/connection network,data storage,file storage,document,folder.svg"
+                            alt="Expertise en IA et cloud">
+                    </div>
+                    <h3 class="text-xl font-semibold text-black-800">Expertise en IA et cloud</h3>
+                    <p class="mt-2 text-gray-600">Nous exploitons les technologies d'IA et de cloud de pointe pour
+                        fournir des solutions transformatrices.</p>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 text-center px-4 mb-8">
+                    <div class="flex justify-center">
+                        <img class="w-12 h-12"
+                            src="images/it services,it systems,data driven,computer,technical Support.svg">
+                    </div>
+                    <h3 class="text-xl font-semibold text-black-800">Solutions sur mesure</h3>
+                    <p class="mt-2 text-gray-600">Votre entreprise est unique. Nous concevons des solutions
+                        personnalisées pour répondre à vos besoins et objectifs spécifiques.</p>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 text-center px-4 mb-8">
+                    <div class="flex justify-center">
+                        <img class="w-12 h-12" src="images/connections,globe grid,connect,worldwide,networking.svg">
+                    </div>
+                    <h3 class="text-xl font-semibold text-black-800">Intégration transparente</h3>
+                    <p class="mt-2 text-gray-600">Nous assurons une intégration harmonieuse avec vos systèmes existants,
+                        minimisant les perturbations et maximisant la productivité.</p>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 text-center px-4 mb-8">
+                    <div class="flex justify-center">
+                        <img class="w-12 h-12" src="images/professional services,team,woman,check,man.svg">
+                    </div>
+                    <h3 class="text-xl font-semibold text-black-800">Support dédié</h3>
+                    <p class="mt-2 text-gray-600">Notre équipe de support dédiée est toujours à votre disposition pour
+                        vous assister, garantissant que vos solutions évoluent avec votre entreprise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center text-gold">Nos Services</h2>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 services">
+                <!-- AI-Powered Business Solutions -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img class="w-12 h-12" src="images/setting,development,browser,programming,monitor.svg"
+                        alt="Expertise en IA et cloud">
+                    <h3 class="text-2xl font-semibold text-black">Solutions basées sur l'IA</h3>
+                    <p class="mt-2 text-gray-600">Exploitez la puissance de l'IA pour automatiser les tâches, analyser
+                        les données et acquérir un avantage concurrentiel.</p>
+                    <ul class="mt-4 text-gray-600 list-disc list-inside">
+                        <li>Analyse de documents</li>
+                        <li>Génération textuelle avec LLM</li>
+                        <li>Agent intéligent pour le traitement de vos données (RAG)</li>
+                        <li>Implémentation d'agent vocal</li>
+                    </ul>
+                </div>
+                <!-- Cloud Application Development -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img class="w-12 h-12"
+                        src="images/repair services,technical Support,maintenance,settings,wrench,gear.svg"
+                        alt="Expertise en IA et cloud">
+                    <h3 class="text-2xl font-semibold text-black">Développement d'applications cloud</h3>
+                    <p class="mt-2 text-gray-600">Construisez des applications évolutives et fiables sur les principales
+                        plateformes cloud.</p>
+                    <ul class="mt-4 text-gray-600 list-disc list-inside">
+                        <li>Développement natif sur le cloud</li>
+                        <li>Architecture de microservices</li>
+                        <li>Intégration de la sécurité</li>
+                        <li>Architecture Serverless</li>
+                    </ul>
+                </div>
+                <!-- Business Workflow Optimization -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <img class="w-12 h-12" src="images/data server,cloud computing,cloud storage,hosting,networking.svg"
+                        alt="Expertise en IA et cloud">
+                    <h3 class="text-2xl font-semibold text-black">Optimisation du flux de travail</h3>
+                    <p class="mt-2 text-gray-600">Rationalisez vos processus et améliorez l'efficacité grâce à des
+                        solutions de flux de travail personnalisées.</p>
+                    <ul class="mt-4 text-gray-600 list-disc list-inside">
+                        <li>Automatisation des processus métier</li>
+                        <li>Developpement d'application dédié (desktop, mobile, web)</li>
+                        <li>Surveillance des performances</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section id="cta" class="py-16 bg-gold text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold">Prêt à transformer votre entreprise ?</h2>
+            <p class="mt-4 text-lg">Associez-vous à nous pour libérer le pouvoir des solutions d'IA et de cloud.</p>
+            <a href="#contact"
+                class="mt-8 inline-block bg-white text-gold px-6 py-3 rounded-md text-lg hover:bg-gray-200 pulse-button">Commencer
+                aujourd'hui</a>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-semibold text-center text-gold">Notre Processus</h2>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 success">
+                <!-- Story 1 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-black">1. Découverte</h3>
+                    <p class="mt-2 text-gray-600">Nous entamons notre collaboration en prenant le temps de bien
+                        comprendre vos objectifs stratégiques ainsi que les défis spécifiques auxquels votre entreprise
+                        est confrontée. Cette étape cruciale nous permet d'identifier les opportunités de croissance et
+                        d'optimisation, tout en tenant compte des particularités de votre secteur d'activité. En nous
+                        immergeant dans votre vision et vos aspirations, nous pouvons élaborer des solutions sur mesure
+                        qui répondent efficacement à vos besoins et vous aident à atteindre vos ambitions.
+                    </p>
+                </div>
+                <!-- Story 2 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-black">2. Conception et développement</h3>
+                    <p class="mt-2 text-gray-600">Nous concevons et développons des solutions sur mesure, parfaitement
+                        adaptées à vos besoins spécifiques et uniques. Notre approche personnalisée nous permet
+                        d'analyser en profondeur les exigences de votre entreprise, afin de créer des outils et des
+                        systèmes qui non seulement répondent à vos attentes, mais qui les dépassent. En intégrant les
+                        dernières technologies et en tenant compte des tendances du marché, nous nous engageons à
+                        fournir des solutions innovantes qui optimisent vos processus, améliorent votre efficacité
+                        opérationnelle et favorisent votre croissance.
+                    </p>
+                </div>
+                <!-- Story 3 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-black">3. Déploiement et intégration</h3>
+                    <p class="mt-2 text-gray-600">Nous déployons et intégrons vos solutions de manière fluide et
+                        transparente au sein de votre infrastructure existante. Notre équipe d'experts s'assure que
+                        chaque étape du processus d'intégration est soigneusement planifiée et exécutée, minimisant
+                        ainsi les interruptions de vos opérations quotidiennes. Grâce à une approche méthodique et à une
+                        communication constante, nous garantissons que les nouvelles solutions s'harmonisent
+                        parfaitement avec vos systèmes en place, tout en optimisant leur performance.</p>
+                </div>
+                <!-- Story 4 -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-black">4. Support et optimisation</h3>
+                    <p class="mt-2 text-gray-600">Nous offrons un support et une optimisation continus, conçus pour
+                        garantir votre succès à long terme. Notre engagement ne s'arrête pas à la mise en œuvre de
+                        solutions ; nous nous investissons pleinement dans votre parcours en vous fournissant une
+                        assistance proactive et réactive.
+                        Notre équipe d'experts est disponible pour répondre à vos questions, résoudre rapidement les
+                        problèmes et vous accompagner dans l'utilisation optimale de nos solutions. Nous réalisons
+                        également des analyses régulières de la performance de vos systèmes, identifiant les
+                        opportunités d'amélioration et d'optimisation.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-black">5. Analyse et Documentation</h3>
+                    <p class="mt-2 text-gray-600">Nous fournissons une analyse détaillée de la solution mise en place,
+                        accompagnée d'une documentation technique complète, garantissant ainsi la pérennité et
+                        l'efficacité de celle-ci. Cette analyse inclut une évaluation des performances et des
+                        fonctionnalités, vous permettant de saisir pleinement les avantages de la solution.
+                        La documentation technique, claire et accessible, comprend des guides d'utilisation, des
+                        procédures d'installation et des recommandations de maintenance. 
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold text-black">6. Formation</h3>
+                    <p class="mt-2 text-gray-600">Nous assurons une formation complète et personnalisée pour les
+                        utilisateurs et les équipes techniques, afin de garantir une adoption efficace des solutions
+                        mises en place.
+
+                        Pour les utilisateurs, nous proposons des ateliers interactifs et des démonstrations pratiques,
+                        leur permettant de se familiariser avec les fonctionnalités et d'optimiser leur utilisation au
+                        quotidien.
+
+                        Pour les équipes techniques, nous offrons des sessions approfondies sur l'architecture, la
+                        maintenance et l'optimisation de la solution, incluant des conseils sur le dépannage et les
+                        meilleures pratiques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve -->
+    <section id="industries" class="py-16 bg-gold text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-semibold text-center ">Nos technologies</h2>
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/openai.avif" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/aws.avif" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/hf.avif" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/google.svg" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/Meta.avif" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/mistral.avif" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/anthropic.avif" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-3">
+            <h2 class="text-3xl font-semibold text-center text-gold">Contactez-nous</h2>
+            <div class="mt-12 max-w-lg mx-auto">
+                <form action="#" method="POST" class="space-y-6">
+                    <input type="text" id="name" name="name" required placeholder="Votre nom"
+                        class="w-full px-4 py-2 border rounded-md focus:ring-gold">
+                    <input type="email" id="email" name="email" required placeholder="Votre email"
+                        class="w-full px-4 py-2 border rounded-md focus:ring-gold">
+                    <textarea id="message" name="message" rows="4" required placeholder="Votre message"
+                        class="w-full px-4 py-2 border rounded-md focus:ring-gold"></textarea>
+                    <button type="submit"
+                        class="w-full bg-gold text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Envoyer
+                        un message</button>
+                </form>
+            </div>
+
+            <div class="mt-12 max-w-lg mx-auto">
+                Adresse
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center md:text-left md:flex md:justify-between md:items-center">
+            <p class="text-sm">&copy; <span id="year"></span> LaDorure. Tous droits réservés.</p>
+            <div class="mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-gold mx-2">Politique de confidentialité</a>
+                <a href="#" class="text-gray-400 hover:text-gold mx-2">Conditions d'utilisation</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get current year for footer
+        const year = new Date().getFullYear();
+        document.getElementById('year').textContent = year;
+
+        // Navigation toggle for mobile
+        const navToggle = document.getElementById('nav-toggle');
+        const navContent = document.getElementById('nav-content');
+
+        navToggle.addEventListener('click', () => {
+            navContent.classList.toggle('hidden');
+        });
+
+
+        VANTA.WAVES({
+            el: document.getElementsByClassName("homeEffect")[0],
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xc0a03f,
+            waveSpeed: 1.66
+        })
+
+    </script>
+</body>
+
+</html>
