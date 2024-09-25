@@ -212,7 +212,7 @@
     <section id="home" class="pt-24 homeEffect">
         <div class="container mx-auto px-6 py-20 text-center">
             <h1 class="hero-title text-4xl md:text-6xl font-bold text-gray-800 tracking-tight">Boostez votre entreprise
-                avec nos solutions d'intelligence artificielle et de cloud computing. Nous proposons des services sur
+                avec nos solutions d'intelligence artificielle et de cloud.<br> Nous proposons des services sur
                 mesure.</h1>
             <p class="mt-4 text-lg md:text-2xl text-gray-600">Favoriser l'innovation et l'efficacité grâce à des
                 conseils informatiques intelligents.</p>
@@ -337,7 +337,7 @@
             <h2 class="text-3xl font-semibold text-center text-gold">Notre Processus</h2>
             <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 success">
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09-14.webp" alt="Process 1" class="h-27 mb-4">
+                    <img src="images/imp/Flux.1 AI-2024-08-09-16.webp" alt="Process 1" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">1. Découverte</h3>
                     <p class="mt-2 text-gray-600">Nous entamons notre collaboration en prenant le temps de bien
                         comprendre vos objectifs stratégiques ainsi que les défis spécifiques auxquels votre entreprise
@@ -349,7 +349,7 @@
                 </div>
                 <!-- Story 2 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09-14.webp" alt="Process 1" class="h-27 mb-4">
+                    <img src="images/imp/Flux.1 AI-2024-08-09-19.webp" alt="Process 1" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">2. Conception et développement</h3>
                     <p class="mt-2 text-gray-600">Nous concevons et développons des solutions sur mesure, parfaitement
                         adaptées à vos besoins spécifiques et uniques. Notre approche personnalisée nous permet
@@ -362,7 +362,7 @@
                 </div>
                 <!-- Story 3 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09-14.webp" alt="Process 1" class="h-27 mb-4">
+                    <img src="images/imp/Flux.1 AI-2024-08-09.webp" alt="Déploiement et intégration" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">3. Déploiement et intégration</h3>
                     <p class="mt-2 text-gray-600">Nous déployons et intégrons vos solutions de manière fluide et
                         transparente au sein de votre infrastructure existante. Notre équipe d'experts s'assure que
@@ -373,7 +373,7 @@
                 </div>
                 <!-- Story 4 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09-14.webp" alt="Process 1" class="h-27 mb-4">
+                    <img src="images/imp/Flux.1 AI-2024-08-09-7.webp" alt="Support et optimisation" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">4. Support et optimisation</h3>
                     <p class="mt-2 text-gray-600">Nous offrons un support et une optimisation continus, conçus pour
                         garantir votre succès à long terme. Notre engagement ne s'arrête pas à la mise en œuvre de
@@ -386,7 +386,7 @@
                     </p>
                 </div>
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09-14.webp" alt="Process 1" class="h-27 mb-4">
+                    <img src="images/imp/Flux.1 AI-2024-08-09-18.webp" alt="Process 1" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">5. Analyse et Documentation</h3>
                     <p class="mt-2 text-gray-600">Nous fournissons une analyse détaillée de la solution mise en place,
                         accompagnée d'une documentation technique complète, garantissant ainsi la pérennité et
@@ -458,7 +458,7 @@
                         class="w-full px-4 py-2 border rounded-md focus:ring-gold">
                     <textarea id="message" name="message" rows="4" required placeholder="Votre message"
                         class="w-full px-4 py-2 border rounded-md focus:ring-gold"></textarea>
-                    <button type="submit"
+                    <button type="submit" id="sendEmail"
                         class="w-full bg-gold text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Envoyer
                         un message</button>
                 </form>
@@ -482,6 +482,38 @@
     </footer>
 
     <script>
+        //Send email with mailto: Nom, email, message
+        document.getElementById('sendEmail').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            //Recipient to my email
+            var recipient = 'example@example.com';
+
+            var name = document.getElementById('name').value;
+            var subject = 'Message de ' + name;         
+            
+            // Get the email input value
+            var email = document.getElementById('email').value;
+            // Regular expression to validate email format
+            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            // Check if the email format is valid
+            if (!emailRegex.test(email)) {
+                alert('Veuillez saisir une adresse email valide.');
+                return;
+            }
+
+            var body = document.getElementById('message').value + '\n\n' + 'Envoyé par ' + name + ' (' + email + ')';
+
+            // Construct the mailto link
+            var mailtoLink = 'mailto:' + recipient +
+                '?subject=' + encodeURIComponent(subject) +
+                '&body=' + encodeURIComponent(body);
+
+            window.location.href = mailtoLink;
+        });
+
+
+
         // Get current year for footer
         const year = new Date().getFullYear();
         document.getElementById('year').textContent = year;
