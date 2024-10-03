@@ -24,9 +24,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Font Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
 
+    <link rel="shortcut icon" href="favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -420,26 +424,53 @@
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-semibold text-center ">Nos technologies</h2>
             <div class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
-                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                <div>
                     <img src="images/corp/openai.avif" alt="">
                 </div>
-                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                <div>
                     <img src="images/corp/aws.avif" alt="">
                 </div>
-                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                <div>
                     <img src="images/corp/hf.avif" alt="">
                 </div>
-                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                <div>
                     <img src="images/corp/google.svg" alt="">
                 </div>
-                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                <div>
                     <img src="images/corp/Meta.avif" alt="">
                 </div>
-                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                <div>
                     <img src="images/corp/mistral.avif" alt="">
                 </div>
-                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                <div>
                     <img src="images/corp/anthropic.avif" alt="">
+                </div>
+                <div>
+                    <img src="images/tech/csharp.png" style="height: 60px; width: auto;" alt="">
+                </div>
+                <div class="text-gray-700">
+                    <img src="images/tech/cplus.png" style="height: 60px; width: auto;" alt="">
+                </div>
+                <div class="text-gray-700">
+                    <img src="images/tech/dotnet.png" style="height: 60%; width: auto;" alt="">
+                </div>
+                <div class="text-gray-700">
+                    <img src="images/tech/nodejs.jpeg" style="height: 60px; width: auto;" alt="">
+                </div>
+                <div class="text-gray-700">
+                    <img src="images/tech/nuxt.jpeg" style="height: 60px; width: auto;" alt="">
+                </div>
+                <div class="text-gray-700">
+                    <img src="images/tech/vuejs.png" style="height: 60px; width: auto;" alt="">
+                </div>
+                <div class="text-gray-700">
+                    <img src="images/tech/python-3-logo.svg" alt="">
+                </div>
+                <div class="text-gray-700">
+                    <img src="images/tech/langchain.jpeg" style="height: 60px; width: auto;" alt="">
+                </div>
+                <div class="text-gray-700">
+                    <img src="images/tech/llamaIndex.png" style="height: 60px; width: auto;" alt="">
                 </div>
             </div>
         </div>
@@ -448,24 +479,69 @@
 
     <!-- Contact -->
     <section id="contact" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-3">
+        <div class="container mx-auto px-6">
             <h2 class="text-3xl font-semibold text-center text-gold">Contactez-nous</h2>
-            <div class="mt-12 max-w-lg mx-auto">
-                <form action="#" method="POST" class="space-y-6">
-                    <input type="text" id="name" name="name" required placeholder="Votre nom"
-                        class="w-full px-4 py-2 border rounded-md focus:ring-gold">
-                    <input type="email" id="email" name="email" required placeholder="Votre email"
-                        class="w-full px-4 py-2 border rounded-md focus:ring-gold">
-                    <textarea id="message" name="message" rows="4" required placeholder="Votre message"
-                        class="w-full px-4 py-2 border rounded-md focus:ring-gold"></textarea>
-                    <button type="submit" id="sendEmail"
-                        class="w-full bg-gold text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Envoyer
-                        un message</button>
-                </form>
-            </div>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 contact">
+                <!-- eMail -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-semibold text-black">Envoyez nous un eMail</h3>
+                    <p class="mt-2 text-gray-600">N'hesitez pas à nous contacter pour plus d'informations conscernant
+                        votre problèmatique.</p>
+                    <br>
+                    <form action="#" method="POST" class="space-y-6">
+                        <input type="text" id="name" name="name" required placeholder="Votre nom"
+                            class="w-full px-4 py-2 border rounded-md focus:ring-gold">
+                        <input type="email" id="email" name="email" required placeholder="Votre email"
+                            class="w-full px-4 py-2 border rounded-md focus:ring-gold">
+                        <textarea id="message" name="message" rows="4" required placeholder="Votre message"
+                            class="w-full px-4 py-2 border rounded-md focus:ring-gold"></textarea>
+                        <button type="submit" id="sendEmail"
+                            class="w-full bg-gold text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Envoyer
+                            un message</button>
+                    </form>
 
-            <div class="mt-12 max-w-lg mx-auto">
-                Adresse
+                </div>
+                <!-- Adresse postal -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    <h3 class="text-2xl font-semibold text-black">Informations</h3>
+                    <br>
+                    <!-- Include Font Awesome CSS file -->
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+                        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+                        crossorigin="anonymous" />
+
+                    <div class="quick-contact">
+                        <address class="text-black d-flex"><span class="fas fa-map-marker-alt"></span><span> 43 Raymouth
+                                Rd. Baltemoer,
+                                London 3910</span></address>
+                        <ul class="mt-4 text-gray-600 list-none">
+                            <li><a href="tel://11234567890" class="d-flex"><span
+                                        class="fas fa-phone"></span><span>+1(123)-456-7890</span></a></li>
+
+                            <li><a href="mailto:info@mydomain.com" class="d-flex"><span
+                                        class="fas fa-envelope"></span><span> info@mydomain.com</span></a></li>
+
+                            <li><a href="https://untree.co/" target="_blank" class="d-flex"><span
+                                        class="fas fa-globe"></span><span> https://mondomain.co/</span></a></li>
+
+
+                            <li><a href="https://github.com/your-github-username" target="_blank"
+                                    style="color: #333; text-decoration: none;">
+                                    <i class="fab fa-github" style="font-size: 24px; margin-right: 10px;"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank"
+                                    style="color: #333; text-decoration: none;">
+                                    <i class="fab fa-linkedin" style="font-size: 24px; margin-right: 10px;"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -490,8 +566,8 @@
             var recipient = 'example@example.com';
 
             var name = document.getElementById('name').value;
-            var subject = 'Message de ' + name;         
-            
+            var subject = 'Message de ' + name;
+
             // Get the email input value
             var email = document.getElementById('email').value;
             // Regular expression to validate email format
