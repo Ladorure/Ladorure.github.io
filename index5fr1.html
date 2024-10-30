@@ -4,63 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LaDorure - 🇫🇷 Solutions IA, Cloud et Applications Developpement">
-
-    <meta name="description"
-        content=" 🇫🇷 Optimisez vos opérations commerciales avec des solutions d'IA et de cloud sur mesure. Notre expertise en intelligence artificielle et en technologies cloud vous aide à stimuler l'innovation, l'efficacité et la croissance.">
-    <meta name="keywords"
-        content="IA, intelligence artificielle, cloud, solutions cloud, optimisation des processus, transformation digitale, consultation informatique, développement d'applications cloud, machine learning, traitement du langage naturel, vision par ordinateur">
-
-    <meta name="description"
-        content=" 🇫🇷 Boostez votre entreprise avec nos solutions d'intelligence artificielle et de cloud computing. Nous proposons des services sur mesure pour optimiser vos processus et stimuler votre croissance.">
-    <meta name="keywords"
-        content="  🇫🇷 Intelligence artificielle, IA, Cloud computing, solutions cloud, optimisation des processus, transformation numérique, conseil informatique">
-
-
     <title>LaDorure - Solutions IA, Cloud et Applications Developpement</title>
-
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Google Font Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <!-- Include Font Awesome CSS file -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" />
-
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
-
-    <link rel="shortcut icon" href="favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        inter: ['Inter', 'sans-serif'],
-                    },
-                    animation: {
-                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
-                    },
-                    keyframes: {
-                        'infinite-scroll': {
-                            from: { transform: 'translateX(0)' },
-                            to: { transform: 'translateX(-100%)' },
-                        }
-                    }
-                },
-            },
-        };
-    </script>
-
     <style>
         /* Custom Gradient Background */
         .bg-gradient-custom {
@@ -192,10 +142,8 @@
     <nav class="fixed w-full z-50 top-0 bg-white shadow-md">
         <div class="container mx-auto flex items-center justify-between flex-wrap p-4">
             <div class="flex items-center flex-shrink-0 text-gold mr-6">
-                <span class="font-semibold text-xl tracking-tight"><img src="LadorureLogo.png" class="h-14"
-                        alt="LaDorure Paris"></span>
+                <span class="font-semibold text-xl tracking-tight">LaDorure</span>
             </div>
-
             <div class="block lg:hidden">
                 <button id="nav-toggle"
                     class="flex items-center px-3 py-2 border rounded text-gray-700 border-gray-700 hover:text-gold hover:border-gold">
@@ -212,14 +160,14 @@
                     </a>
                     <a href="#services" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gold mr-4">
                         Services
-                    </a>
+                    </a> 
                     <a href="#process" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gold mr-4">
                         Notre processus
                     </a>
                     <a href="#industries" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gold mr-4">
                         Technologies
                     </a>
-
+                   
                     <a href="#contact" class="block mt-4 lg:inline-block lg:mt-0 text-gray-700 hover:text-gold">
                         Contact
                     </a>
@@ -239,14 +187,13 @@
     <!-- Hero Section -->
     <section id="home" class="pt-24 homeEffect">
         <div class="container mx-auto px-6 py-20 text-center">
-            <h1 class="hero-title text-4xl md:text-6xl font-bold text-gray-800 tracking-tight">Boostez votre entreprise
-                avec nos solutions d'intelligence artificielle et de cloud.<br> Nous proposons des services sur
-                mesure.</h1>
+            <h1 class="hero-title text-4xl md:text-6xl font-bold text-gray-800 tracking-tight">Donnez un coup de pouce à
+                votre entreprise avec des solutions d'IA et de cloud</h1>
             <p class="mt-4 text-lg md:text-2xl text-gray-600">Favoriser l'innovation et l'efficacité grâce à des
-                conseils informatiques intelligents.</p>
+                conseils informatiques intelligents</p>
             <a href="#contact"
                 class="mt-8 inline-block bg-gold text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Transformer
-                votre flux de travail.</a>
+                votre flux de travail</a>
         </div>
     </section>
 
@@ -364,8 +311,8 @@
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-semibold text-center text-gold">Notre Processus</h2>
             <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 success">
+                <!-- Story 1 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09-16.webp" alt="Process 1" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">1. Découverte</h3>
                     <p class="mt-2 text-gray-600">Nous entamons notre collaboration en prenant le temps de bien
                         comprendre vos objectifs stratégiques ainsi que les défis spécifiques auxquels votre entreprise
@@ -377,7 +324,6 @@
                 </div>
                 <!-- Story 2 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09-19.webp" alt="Process 1" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">2. Conception et développement</h3>
                     <p class="mt-2 text-gray-600">Nous concevons et développons des solutions sur mesure, parfaitement
                         adaptées à vos besoins spécifiques et uniques. Notre approche personnalisée nous permet
@@ -390,7 +336,6 @@
                 </div>
                 <!-- Story 3 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09.webp" alt="Déploiement et intégration" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">3. Déploiement et intégration</h3>
                     <p class="mt-2 text-gray-600">Nous déployons et intégrons vos solutions de manière fluide et
                         transparente au sein de votre infrastructure existante. Notre équipe d'experts s'assure que
@@ -401,7 +346,6 @@
                 </div>
                 <!-- Story 4 -->
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09-7.webp" alt="Support et optimisation" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">4. Support et optimisation</h3>
                     <p class="mt-2 text-gray-600">Nous offrons un support et une optimisation continus, conçus pour
                         garantir votre succès à long terme. Notre engagement ne s'arrête pas à la mise en œuvre de
@@ -414,18 +358,16 @@
                     </p>
                 </div>
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09-18.webp" alt="Process 1" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">5. Analyse et Documentation</h3>
                     <p class="mt-2 text-gray-600">Nous fournissons une analyse détaillée de la solution mise en place,
                         accompagnée d'une documentation technique complète, garantissant ainsi la pérennité et
                         l'efficacité de celle-ci. Cette analyse inclut une évaluation des performances et des
                         fonctionnalités, vous permettant de saisir pleinement les avantages de la solution.
                         La documentation technique, claire et accessible, comprend des guides d'utilisation, des
-                        procédures d'installation et des recommandations de maintenance.
+                        procédures d'installation et des recommandations de maintenance. 
                     </p>
                 </div>
                 <div class="bg-gray-100 p-6 rounded-lg shadow-md">
-                    <img src="images/imp/Flux.1 AI-2024-08-09-21.webp" alt="Process 1" class="h-27 mb-4">
                     <h3 class="text-2xl font-semibold text-black">6. Formation</h3>
                     <p class="mt-2 text-gray-600">Nous assurons une formation complète et personnalisée pour les
                         utilisateurs et les équipes techniques, afin de garantir une adoption efficace des solutions
@@ -444,133 +386,56 @@
     </section>
 
     <!-- Industries We Serve -->
-    <section id="industries" class="py-16 bg-gray-700 text-white">
+    <section id="industries" class="py-16 bg-gold text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-semibold text-center ">Nos technologies</h2>
-<br>
-            <!-- Logo Carousel animation -->
-            <div x-data="{}" x-init="$nextTick(() => {
-                 let ul = $refs.logos;
-                 ul.insertAdjacentHTML('afterend', ul.outerHTML);
-                 ul.nextSibling.setAttribute('aria-hidden', 'true');
-             })"
-                class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-                <ul x-ref="logos"
-                    class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
-                    <li>
-                        <img src="images/corp/openai.avif" class="w-40" alt="OpenAI">
-                    </li>
-                    <li>
-                        <img src="images/corp/aws.avif" class="w-40" alt="AWS" />
-                    </li>
-                    <li>
-                        <img src="images/corp/hf.avif" class="w-40" alt="HuggingFace" />
-                    </li>
-                    <li>
-                        <img src="images/corp/google.svg" class="w-18" alt="Google" />
-                    </li>
-                    <li>
-                        <img src="images/corp/Meta.avif" class="w-40" alt="Meta" />
-                    </li>
-                    <li>
-                        <img src="images/corp/mistral.avif" class="w-40" alt="Mistral AI" />
-                    </li>
-                    <li>
-                        <img src="images/corp/anthropic.avif" class="w-40" alt="Anthropic" />
-                    </li>
-                    <li>
-                        <img src="images/tech/csharp.png" style="height: 60px; width: auto;" alt="C#" />
-                    </li>
-                    <li>
-                        <img src="images/tech/cplus.png" style="height: 60px; width: auto;" alt="C++" />
-                    </li>
-                    <li>
-                        <img src="images/tech/dotnet.png" style="height: 60px; width: auto;" alt="DotNet" />
-                    </li>
-                    <li>
-                        <img src="images/tech/nodejs.jpeg" style="height: 60px; width: auto;" alt="NodeJS" />
-                    </li>
-                    <li>
-                        <img src="images/tech/nuxt.jpeg" style="height: 60px; width: auto;" alt="NuxtJS" />
-                    </li>
-                    <li>
-                        <img src="images/tech/langchain.jpeg" style="height: 60px; width: auto;" alt="LangChain" />
-                    </li>
-                    <li>
-                        <img src="images/tech/llamaIndex.png" style="height: 60px; width: auto;" alt="llamaIndex" />
-                    </li>
-                </ul>
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/openai.avif" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/aws.avif" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/hf.avif" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/google.svg" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/Meta.avif" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/mistral.avif" alt="">
+                </div>
+                <div class="text-gray-700 hover:text-gold transition-colors duration-300">
+                    <img src="images/corp/anthropic.avif" alt="">
+                </div>
             </div>
-            <!-- End: Logo Carousel animation -->
         </div>
     </section>
 
 
     <!-- Contact -->
     <section id="contact" class="py-16 bg-gray-100">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-3">
             <h2 class="text-3xl font-semibold text-center text-gold">Contactez-nous</h2>
-            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 contact">
-                <!-- eMail -->
-                <div
-                    class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-semibold text-black">Envoyez nous un eMail</h3>
-                    <p class="mt-2 text-gray-600">N'hesitez pas à nous contacter pour plus d'informations conscernant
-                        votre problèmatique.</p>
-                    <br>
-                    <form action="#" method="POST" class="space-y-6">
-                        <input type="text" id="name" name="name" required placeholder="Votre nom"
-                            class="w-full px-4 py-2 border rounded-md focus:ring-gold">
-                        <input type="email" id="email" name="email" required placeholder="Votre email"
-                            class="w-full px-4 py-2 border rounded-md focus:ring-gold">
-                        <textarea id="message" name="message" rows="4" required placeholder="Votre message"
-                            class="w-full px-4 py-2 border rounded-md focus:ring-gold"></textarea>
-                        <button type="submit" id="sendEmail"
-                            class="w-full bg-gold text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Envoyer
-                            un message</button>
-                    </form>
+            <div class="mt-12 max-w-lg mx-auto">
+                <form action="#" method="POST" class="space-y-6">
+                    <input type="text" id="name" name="name" required placeholder="Votre nom"
+                        class="w-full px-4 py-2 border rounded-md focus:ring-gold">
+                    <input type="email" id="email" name="email" required placeholder="Votre email"
+                        class="w-full px-4 py-2 border rounded-md focus:ring-gold">
+                    <textarea id="message" name="message" rows="4" required placeholder="Votre message"
+                        class="w-full px-4 py-2 border rounded-md focus:ring-gold"></textarea>
+                    <button type="submit"
+                        class="w-full bg-gold text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Envoyer
+                        un message</button>
+                </form>
+            </div>
 
-                </div>
-                <!-- Adresse postal -->
-                <div
-                    class="text-center bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
-                    <h3 class="text-2xl font-semibold text-black">Informations</h3>
-                    <br>
-
-
-                    <div class="quick-contact text-left">
-
-                        <ul class="mt-4 text-gray-600 list-none pb-3 ">
-                            <li>
-                                <address class="text-gray d-flex"><span class="fas fa-map-marker-alt"></span>
-                                    <span> 11 Rue ... ...,
-                                        Paris 75002<span>
-                                </address>
-                            </li>
-                            <li><a href="mailto:info@mydomain.com" class="d-flex"><span
-                                        class="fas fa-envelope"></span><span> info@mydomain.com</span></a></li>
-
-                        </ul>
-                        <lu class="mt-4 text-gray-600 list-none pb-3 ">
-                            <li><a href="#" target="_blank" class="d-flex"><span class="fas fa-globe"
-                                        style="font-size: 24px;"></span><span>
-                                        https://</span></a></li>
-
-                            <li><a href="tel://11234567890" class="d-flex"><span class="fas fa-phone"></span><span>
-                                        +33 612 34 78 90</span></a></li>
-                            <li><a href="https://github.com/ladorure" target="_blank">
-                                    <span class="fab fa-github" style="font-size: 24px;"></span>
-                                    <span>https://github.com/ladorure</span>
-                                </a></li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank">
-                                    <span class="fab fa-linkedin" style="font-size: 24px;"></span>
-                                    <span>https://linkedin.com/in/</span>
-                                </a>
-                            </li>
-                        </lu>
-                    </div>
-                </div>
+            <div class="mt-12 max-w-lg mx-auto">
+                Adresse
             </div>
         </div>
     </section>
@@ -579,43 +444,14 @@
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center md:text-left md:flex md:justify-between md:items-center">
             <p class="text-sm">&copy; <span id="year"></span> LaDorure. Tous droits réservés.</p>
-
+            <div class="mt-4 md:mt-0">
+                <a href="#" class="text-gray-400 hover:text-gold mx-2">Politique de confidentialité</a>
+                <a href="#" class="text-gray-400 hover:text-gold mx-2">Conditions d'utilisation</a>
+            </div>
         </div>
     </footer>
 
     <script>
-        //Send email with mailto: Nom, email, message
-        document.getElementById('sendEmail').addEventListener('click', function (e) {
-            e.preventDefault();
-
-            //Recipient to my email
-            var recipient = 'example@example.com';
-
-            var name = document.getElementById('name').value;
-            var subject = 'Message de ' + name;
-
-            // Get the email input value
-            var email = document.getElementById('email').value;
-            // Regular expression to validate email format
-            var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            // Check if the email format is valid
-            if (!emailRegex.test(email)) {
-                alert('Veuillez saisir une adresse email valide.');
-                return;
-            }
-
-            var body = document.getElementById('message').value + '\n\n' + 'Envoyé par ' + name + ' (' + email + ')';
-
-            // Construct the mailto link
-            var mailtoLink = 'mailto:' + recipient +
-                '?subject=' + encodeURIComponent(subject) +
-                '&body=' + encodeURIComponent(body);
-
-            window.location.href = mailtoLink;
-        });
-
-
-
         // Get current year for footer
         const year = new Date().getFullYear();
         document.getElementById('year').textContent = year;
@@ -641,7 +477,6 @@
             color: 0xc0a03f,
             waveSpeed: 1.66
         })
-
 
     </script>
 </body>

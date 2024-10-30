@@ -18,13 +18,14 @@
 
 
     <title>LaDorure - Solutions IA, Cloud et Applications Developpement</title>
-    <!-- Tailwind CSS CDN 
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    -->
-    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Google Font Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+    <!-- Include Font Awesome CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
@@ -36,6 +37,29 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+                    },
+                    keyframes: {
+                        'infinite-scroll': {
+                            from: { transform: 'translateX(0)' },
+                            to: { transform: 'translateX(-100%)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
 
     <style>
         /* Custom Gradient Background */
@@ -423,50 +447,61 @@
     <section id="industries" class="py-16 bg-gray-700 text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-semibold text-center ">Nos technologies</h2>
-            <div class="mt-12 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
-                <div>
-                    <img src="images/corp/openai.avif" alt="">
-                </div>
-                <div>
-                    <img src="images/corp/aws.avif" alt="">
-                </div>
-                <div>
-                    <img src="images/corp/hf.avif" alt="">
-                </div>
-                <div>
-                    <img src="images/corp/google.svg" alt="">
-                </div>
-                <div>
-                    <img src="images/corp/Meta.avif" alt="">
-                </div>
-                <div>
-                    <img src="images/corp/mistral.avif" alt="">
-                </div>
-                <div>
-                    <img src="images/corp/anthropic.avif" alt="">
-                </div>
-                <div>
-                    <img src="images/tech/csharp.png" style="height: 60px; width: auto;" alt="">
-                </div>
-                <div class="text-gray-700">
-                    <img src="images/tech/cplus.png" style="height: 60px; width: auto;" alt="">
-                </div>
-                <div class="text-gray-700">
-                    <img src="images/tech/dotnet.png" style="height: 60%; width: auto;" alt="">
-                </div>
-                <div class="text-gray-700">
-                    <img src="images/tech/nodejs.jpeg" style="height: 60px; width: auto;" alt="">
-                </div>
-                <div class="text-gray-700">
-                    <img src="images/tech/nuxt.jpeg" style="height: 60px; width: auto;" alt="">
-                </div>
-                <div class="text-gray-700">
-                    <img src="images/tech/langchain.jpeg" style="height: 60px; width: auto;" alt="">
-                </div>
-                <div class="text-gray-700">
-                    <img src="images/tech/llamaIndex.png" style="height: 60px; width: auto;" alt="">
-                </div>
+<br>
+            <!-- Logo Carousel animation -->
+            <div x-data="{}" x-init="$nextTick(() => {
+                 let ul = $refs.logos;
+                 ul.insertAdjacentHTML('afterend', ul.outerHTML);
+                 ul.nextSibling.setAttribute('aria-hidden', 'true');
+             })"
+                class="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                <ul x-ref="logos"
+                    class="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-infinite-scroll">
+                    <li>
+                        <img src="images/corp/openai.avif" class="w-40" alt="OpenAI">
+                    </li>
+                    <li>
+                        <img src="images/corp/aws.avif" class="w-40" alt="AWS" />
+                    </li>
+                    <li>
+                        <img src="images/corp/hf.avif" class="w-40" alt="HuggingFace" />
+                    </li>
+                    <li>
+                        <img src="images/corp/google.svg" class="w-18" alt="Google" />
+                    </li>
+                    <li>
+                        <img src="images/corp/Meta.avif" class="w-40" alt="Meta" />
+                    </li>
+                    <li>
+                        <img src="images/corp/mistral.avif" class="w-40" alt="Mistral AI" />
+                    </li>
+                    <li>
+                        <img src="images/corp/anthropic.avif" class="w-40" alt="Anthropic" />
+                    </li>
+                    <li>
+                        <img src="images/tech/csharp.png" style="height: 60px; width: auto;" alt="C#" />
+                    </li>
+                    <li>
+                        <img src="images/tech/cplus.png" style="height: 60px; width: auto;" alt="C++" />
+                    </li>
+                    <li>
+                        <img src="images/tech/dotnet.png" style="height: 60px; width: auto;" alt="DotNet" />
+                    </li>
+                    <li>
+                        <img src="images/tech/nodejs.jpeg" style="height: 60px; width: auto;" alt="NodeJS" />
+                    </li>
+                    <li>
+                        <img src="images/tech/nuxt.jpeg" style="height: 60px; width: auto;" alt="NuxtJS" />
+                    </li>
+                    <li>
+                        <img src="images/tech/langchain.jpeg" style="height: 60px; width: auto;" alt="LangChain" />
+                    </li>
+                    <li>
+                        <img src="images/tech/llamaIndex.png" style="height: 60px; width: auto;" alt="llamaIndex" />
+                    </li>
+                </ul>
             </div>
+            <!-- End: Logo Carousel animation -->
         </div>
     </section>
 
@@ -498,42 +533,42 @@
                 </div>
                 <!-- Adresse postal -->
                 <div
-                    class="bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
+                    class="text-center bg-white p-6 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300">
                     <h3 class="text-2xl font-semibold text-black">Informations</h3>
                     <br>
-                    <!-- Include Font Awesome CSS file -->
-                    <link rel="stylesheet"
-                        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-                        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-                        crossorigin="anonymous" />
 
-                    <div class="quick-contact">
-                        <address class="text-black d-flex"><span class="fas fa-map-marker-alt"></span><span> 43 Raymouth
-                                Rd. Baltemoer,
-                                London 3910</span></address>
-                        <ul class="mt-4 text-gray-600 list-none">
-                            <li><a href="tel://11234567890" class="d-flex"><span
-                                        class="fas fa-phone"></span><span>+1(123)-456-7890</span></a></li>
 
+                    <div class="quick-contact text-left">
+
+                        <ul class="mt-4 text-gray-600 list-none pb-3 ">
+                            <li>
+                                <address class="text-gray d-flex"><span class="fas fa-map-marker-alt"></span>
+                                    <span> 11 Rue ... ...,
+                                        Paris 75002<span>
+                                </address>
+                            </li>
                             <li><a href="mailto:info@mydomain.com" class="d-flex"><span
                                         class="fas fa-envelope"></span><span> info@mydomain.com</span></a></li>
 
-                            <li><a href="https://untree.co/" target="_blank" class="d-flex"><span
-                                        class="fas fa-globe"></span><span> https://mondomain.co/</span></a></li>
-
-
-                            <li><a href="https://github.com/your-github-username" target="_blank"
-                                    style="color: #333; text-decoration: none;">
-                                    <i class="fab fa-github" style="font-size: 24px; margin-right: 10px;"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank"
-                                    style="color: #333; text-decoration: none;">
-                                    <i class="fab fa-linkedin" style="font-size: 24px; margin-right: 10px;"></i>
-                                </a>
-                            </li>
                         </ul>
+                        <lu class="mt-4 text-gray-600 list-none pb-3 ">
+                            <li><a href="#" target="_blank" class="d-flex"><span class="fas fa-globe"
+                                        style="font-size: 24px;"></span><span>
+                                        https://</span></a></li>
+
+                            <li><a href="tel://11234567890" class="d-flex"><span class="fas fa-phone"></span><span>
+                                        +33 612 34 78 90</span></a></li>
+                            <li><a href="https://github.com/ladorure" target="_blank">
+                                    <span class="fab fa-github" style="font-size: 24px;"></span>
+                                    <span>https://github.com/ladorure</span>
+                                </a></li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/your-linkedin-username/" target="_blank">
+                                    <span class="fab fa-linkedin" style="font-size: 24px;"></span>
+                                    <span>https://linkedin.com/in/</span>
+                                </a>
+                            </li>
+                        </lu>
                     </div>
                 </div>
             </div>
@@ -544,10 +579,7 @@
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto px-6 text-center md:text-left md:flex md:justify-between md:items-center">
             <p class="text-sm">&copy; <span id="year"></span> LaDorure. Tous droits réservés.</p>
-            <div class="mt-4 md:mt-0">
-                <a href="#" class="text-gray-400 hover:text-gold mx-2">Politique de confidentialité</a>
-                <a href="#" class="text-gray-400 hover:text-gold mx-2">Conditions d'utilisation</a>
-            </div>
+
         </div>
     </footer>
 
@@ -609,6 +641,7 @@
             color: 0xc0a03f,
             waveSpeed: 1.66
         })
+
 
     </script>
 </body>
