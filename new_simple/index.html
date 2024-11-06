@@ -85,6 +85,12 @@
             background-color: var(--gold-color);
         }
 
+        .bg-gold-texture {
+      background-image: url('images/gold-metal-texture-background.avif');
+      background-size: cover;
+      background-position: center;
+    }
+
         .hover:bg-gold-dark {
             background-color: #b28f26;
             /* Darker gold on hover */
@@ -226,7 +232,7 @@
                 </div>
                 <div>
                     <a href="#contact"
-                        class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-gold hover:bg-gold-dark mt-4 lg:mt-0 pulse-button">
+                        class="inline-block text-sm px-4 py-2 leading-none border rounded text-white bg-gold-texture mt-4 lg:mt-0 pulse-button">
                         Commencer
                     </a>
                 </div>
@@ -245,7 +251,7 @@
             <p class="mt-4 text-lg md:text-2xl text-gray-600">Favoriser l'innovation et l'efficacité grâce à des
                 conseils informatiques intelligents.</p>
             <a href="#contact"
-                class="mt-8 inline-block bg-gold text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Transformer
+                class="mt-8 inline-block bg-gold-texture text-white px-6 py-3 rounded-md text-lg hover:bg-gold-texture pulse-button">Transformer
                 votre flux de travail.</a>
         </div>
     </section>
@@ -349,7 +355,7 @@
     </section>
 
     <!-- Call to Action -->
-    <section id="cta" class="py-16 bg-gold text-white">
+    <section id="cta" class="py-16 bg-gold-texture text-white">
         <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-semibold">Prêt à transformer votre entreprise ?</h2>
             <p class="mt-4 text-lg">Associez-vous à nous pour libérer le pouvoir des solutions d'IA et de cloud.</p>
@@ -446,7 +452,7 @@
     <!-- Industries We Serve -->
     <section id="industries" class="py-16 bg-gray-700 text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl font-semibold text-center text-gold"">Nos technologies</h2>
+            <h2 class="text-3xl font-semibold text-center text-gold">Nos technologies</h2>
 <br>
             <!-- Logo Carousel animation -->
             <div x-data="{}" x-init="$nextTick(() => {
@@ -526,7 +532,7 @@
                         <textarea id="message" name="message" rows="4" required placeholder="Votre message"
                             class="w-full px-4 py-2 border rounded-md focus:ring-gold"></textarea>
                         <button type="submit" id="sendEmail"
-                            class="w-full bg-gold text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Envoyer
+                            class="w-full bg-gold-texture text-white px-6 py-3 rounded-md text-lg hover:bg-gold-dark pulse-button">Envoyer
                             un message</button>
                     </form>
 
